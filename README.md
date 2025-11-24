@@ -51,7 +51,6 @@ Funcionalidades principais:
 
 ## 📦 Pré-requisitos
 
-```bash
 Python 3.8+
 PostgreSQL 12+
 psycopg2
