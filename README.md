@@ -32,7 +32,7 @@ Este é um sistema de biblioteca universitária desenvolvido em **Python** com a
 
 Funcionalidades principais:
 
-- Cadastro de autores (nome + nacionalidade)  
+- Cadastro de autores (nome + nacionalidade)   
 - Cadastro de livros (título + ano de publicação + autor)  
 - Listagem de autores  
 - Listagem de livros  
@@ -41,8 +41,8 @@ Funcionalidades principais:
 
 ## 🚀 Tecnologias Utilizadas
 
-- 🐍 Python 3.8+  
-- 🐘 PostgreSQL  
+- 🐍 Python 3.8+    
+- 🐘 PostgreSQL    
 - 🔌 psycopg2  
 - 🧱 Arquitetura MVC  
 - 🖥 Interface de linha de comando (CLI)
@@ -51,10 +51,10 @@ Funcionalidades principais:
 
 ## 📦 Pré-requisitos
 
-Python 3.8+
-PostgreSQL 12+
-psycopg2
-Git (opcional)
+Python 3.8+  
+PostgreSQL 12+  
+psycopg2  
+Git (opcional)  
 
 ## 📥 Instalação do Projeto
 
@@ -83,37 +83,37 @@ Se o arquivo não existir:
 pip install psycopg2
 
 ## 🗄 Configuração do Banco PostgreSQL
-🔧 Criar banco de dados
-CREATE DATABASE biblioteca;
+🔧 Criar banco de dados  
+CREATE DATABASE biblioteca;  
 
-🔧 Criar usuário (opcional)
-CREATE USER biblioteca_user WITH PASSWORD 'senha123';
-GRANT ALL PRIVILEGES ON DATABASE biblioteca TO biblioteca_user;
+🔧 Criar usuário (opcional)  
+CREATE USER biblioteca_user WITH PASSWORD 'senha123';  
+GRANT ALL PRIVILEGES ON DATABASE biblioteca TO biblioteca_user;  
 
-🔧 Criar as tabelas
-CREATE TABLE autor (
-    id SERIAL PRIMARY KEY,
-    nome VARCHAR(150) NOT NULL,
-    nacionalidade VARCHAR(100) NOT NULL
+🔧 Criar as tabelas  
+CREATE TABLE autor (  
+    id SERIAL PRIMARY KEY,  
+    nome VARCHAR(150) NOT NULL,  
+    nacionalidade VARCHAR(100) NOT NULL  
 );
 
-CREATE TABLE livro (
-    id SERIAL PRIMARY KEY,
-    titulo VARCHAR(200) NOT NULL,
-    ano_publicacao INT NOT NULL,
-    id_autor INTEGER NOT NULL REFERENCES autor(id)
+CREATE TABLE livro (  
+    id SERIAL PRIMARY KEY,  
+    titulo VARCHAR(200) NOT NULL,  
+    ano_publicacao INT NOT NULL,  
+    id_autor INTEGER NOT NULL REFERENCES autor(id)  
 );
 
 ## ⚙ Arquivo de Conexão
 
 Edite models/conexao.py conforme seu ambiente:
 
-DB_CONFIG = {
-    "host": "localhost",
-    "port": 5432,
-    "dbname": "biblioteca",
-    "user": "biblioteca_user",
-    "password": "senha123"
+DB_CONFIG = {  
+    "host": "localhost",  
+    "port": 5432,  
+    "dbname": "biblioteca",  
+    "user": "biblioteca_user",  
+    "password": "senha123"  
 }
 
 ## ▶ Como Executar
@@ -123,37 +123,37 @@ python main.py
 
 O menu permitirá:
 
-➕ Cadastrar autor
+➕ Cadastrar autor  
 
-➕ Cadastrar livro
+➕ Cadastrar livro  
 
-📄 Listar autores
+📄 Listar autores  
 
-📄 Listar livros
+📄 Listar livros  
 
-❌ Sair
+❌ Sair  
 
 ## 📂 Estrutura do Projeto
-Sistema-de-Biblioteca-Universit-ria/
-├── controllers/
-│   ├── autor_controller.py
-│   ├── livro_controller.py
-├── models/
-│   ├── autor.py
-│   ├── livro.py
-│   ├── conexao.py
-├── views/
-│   ├── autor_view.py
-│   ├── livro_view.py
-│   ├── menu_view.py
-├── main.py
-├── README.md
-└── requirements.txt
+Sistema-de-Biblioteca-Universit-ria/  
+├── controllers/  
+│   ├── autor_controller.py  
+│   ├── livro_controller.py  
+├── models/  
+│   ├── autor.py  
+│   ├── livro.py  
+│   ├── conexao.py  
+├── views/  
+│   ├── autor_view.py  
+│   ├── livro_view.py  
+│   ├── menu_view.py  
+├── main.py  
+├── README.md  
+└── requirements.txt  
 
 ## 🙋‍♀️ Contribuição
 
-Contribuições são bem-vindas!
-Sinta-se à vontade para abrir issues ou enviar pull requests.
+Contribuições são bem-vindas!  
+Sinta-se à vontade para abrir issues ou enviar pull requests.  
 
 ## 📜 Licença
 
